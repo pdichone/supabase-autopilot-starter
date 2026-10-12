@@ -2,19 +2,20 @@
   "project_ref": "gxnxvufqhiszkezkvodo",
   "instance": "primary",
   "last_run": {
-    "observed_at": "2026-10-12T22:08:33Z",
+    "observed_at": "2026-10-12T22:50:00Z",
     "windows": {
       "current": ["2026-10-12T21:00:00Z", "2026-10-12T22:00:00Z"],
       "preceding": ["2026-10-12T20:00:00Z", "2026-10-12T21:00:00Z"]
     },
     "source_doc": "https://supabase.com/docs/guides/observability/detecting.md"
   },
+  "previous_run_observed_at": "2026-10-12T22:08:33Z",
   "checks": {
     "api_auth_server_errors": {
       "result": "clear",
       "sources": {
         "edge_logs": { "events": 965, "responses": 965, "server_errors": 0, "rate_pct": 0.0, "preceding_responses": 149, "preceding_server_errors": 0, "preceding_rate_pct": 0.0, "unknown_status": 0 },
-        "auth_logs": { "events": 1596, "responses": 1065, "server_errors": 0, "rate_pct": 0.0, "preceding_responses": 1698, "preceding_server_errors": 0, "preceding_rate_pct": 0.0, "unknown_status": 0, "no_status_events": 531, "preceding_no_status_events": 849 }
+        "auth_logs": { "events": 2340, "responses": 1561, "server_errors": 0, "rate_pct": 0.0, "preceding_responses": 1700, "preceding_server_errors": 0, "preceding_rate_pct": 0.0, "unknown_status": 0, "no_status_events": 779, "preceding_no_status_events": 850 }
       },
       "thresholds": { "min_server_errors": 20, "min_rate_pct": 1.0, "min_ratio_vs_preceding": 2.0, "min_responses_per_window": 100 },
       "evidence": ["query_logs edge_logs/auth_logs 2026-10-12T20:00Z-22:00Z"]
@@ -26,8 +27,8 @@
       "max_connections": 60,
       "pct_of_max": 11.7,
       "threshold_pct": 80,
-      "role": "supabase_read_only_user",
-      "evidence": ["execute_sql pg_stat_activity 2026-10-12T22:08Z"]
+      "previous_pct_of_max": 11.7,
+      "evidence": ["execute_sql pg_stat_activity 2026-10-12T22:45Z"]
     }
   },
   "alerts": { "open": [], "resolved": [] },
