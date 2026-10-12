@@ -1,0 +1,35 @@
+{
+  "project_ref": "gxnxvufqhiszkezkvodo",
+  "instance": "primary",
+  "last_run": {
+    "observed_at": "2026-10-12T21:00:21Z",
+    "windows": {
+      "current": ["2026-10-12T19:00:00Z", "2026-10-12T20:00:00Z"],
+      "preceding": ["2026-10-12T18:00:00Z", "2026-10-12T19:00:00Z"]
+    },
+    "source_doc": "https://supabase.com/docs/guides/observability/detecting.md"
+  },
+  "checks": {
+    "api_auth_server_errors": {
+      "result": "clear",
+      "sources": {
+        "edge_logs": { "events": 112, "responses": 112, "server_errors": 0, "rate_pct": 0.0, "preceding_responses": 773, "preceding_server_errors": 0, "preceding_rate_pct": 0.0, "unknown_status": 0 },
+        "auth_logs": { "events": 1932, "responses": 1288, "server_errors": 0, "rate_pct": 0.0, "preceding_responses": 193, "preceding_server_errors": 0, "preceding_rate_pct": 0.0, "unknown_status": 644, "preceding_unknown_status": 97 }
+      },
+      "thresholds": { "min_server_errors": 20, "min_rate_pct": 1.0, "min_ratio_vs_preceding": 2.0, "min_responses_per_window": 100 },
+      "evidence": ["affa8169", "747440c4"]
+    },
+    "connection_pressure": {
+      "result": "clear",
+      "client_connections": 7,
+      "active_connections": 1,
+      "max_connections": 60,
+      "pct_of_max": 11.7,
+      "threshold_pct": 80,
+      "role": "supabase_read_only_user",
+      "evidence": ["081bf38a"]
+    }
+  },
+  "alerts": { "open": [], "resolved": [] },
+  "dedup": "unavailable: no prior state"
+}
