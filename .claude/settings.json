@@ -1,0 +1,31 @@
+{
+  "enabledMcpjsonServers": ["supabase-monitor"],
+  "permissions": {
+    "allow": [
+      "mcp__supabase-monitor__query_logs",
+      "mcp__supabase-monitor__execute_sql",
+      "mcp__supabase-monitor__get_advisors",
+      "mcp__supabase-monitor__search_docs",
+      "WebFetch(domain:supabase.com)",
+      "Read",
+      "Write(state/**)",
+      "Edit(state/**)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(git rebase:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git branch:*)",
+      "Bash(git diff:*)",
+      "Bash(git show:*)",
+      "Bash(date:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}

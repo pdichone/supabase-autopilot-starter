@@ -1,0 +1,35 @@
+{
+  "_comment": "Shape of state/health.json after a run. Values here are from a real low-traffic project, redacted. Copy to state/health.json only if you want to seed a baseline; otherwise the first run creates it.",
+  "project_ref": "REDACTED_PROJECT_REF",
+  "instance": "primary",
+  "last_run": {
+    "observed_at": "2026-10-06T17:07:41Z",
+    "windows": {
+      "current": ["2026-10-06T16:00:00Z", "2026-10-06T17:00:00Z"],
+      "preceding": ["2026-10-06T15:00:00Z", "2026-10-06T16:00:00Z"]
+    }
+  },
+  "checks": {
+    "api_auth_server_errors": {
+      "result": "clear",
+      "sources": {
+        "edge_logs": { "responses": 1842, "server_errors": 0, "rate_pct": 0.0, "preceding_rate_pct": 0.0, "unknown_status": 0 },
+        "auth_logs": { "responses": 211, "server_errors": 0, "rate_pct": 0.0, "preceding_rate_pct": 0.0, "unknown_status": 3 }
+      },
+      "thresholds": { "min_server_errors": 20, "min_rate_pct": 1.0, "min_ratio_vs_preceding": 2.0, "min_responses_per_window": 100 }
+    },
+    "connection_pressure": {
+      "result": "clear",
+      "client_connections": 12,
+      "active_connections": 2,
+      "max_connections": 60,
+      "pct_of_max": 20.0,
+      "threshold_pct": 80
+    }
+  },
+  "alerts": {
+    "open": [],
+    "resolved": []
+  },
+  "notes": "First run with no prior state reports that deduplication is unavailable. From the second run on, unchanged findings are suppressed."
+}

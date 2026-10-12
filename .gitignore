@@ -1,0 +1,3 @@
+# the live state file is written by the agent; commit it on purpose, but never commit tokens
+.env
+*.local
